@@ -40,8 +40,8 @@
           <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
         </div>
         <div id="user-info">
-          <h2 id="user-name">Admin Mobile</h2>
-          <span id="user-role">Programmer</span>
+          <h2 id="user-name">Dendi</h2>
+          <span id="user-role">Postrix</span>
         </div>
       </div>
     </div>
@@ -58,6 +58,14 @@
               <div class="menu-name">
                 <span class="text-center">Profil</span>
               </div>
+            </div>
+            <div class="item-menu text-center">
+              <div class="menu-icon">
+                <a href="<?php echo site_url("home/izin"); ?>" class="orange" style="font-size: 40px">
+                <i class="fa-regular fa-file"></i>
+                </a>
+              </div>
+              <div class="menu-name">Izin</div>
             </div>
             <div class="item-menu text-center">
               <div class="menu-icon">
@@ -79,14 +87,7 @@
                 <span class="text-center">Histori</span>
               </div>
             </div>
-            <div class="item-menu text-center">
-              <div class="menu-icon">
-                <a href="<?php echo site_url("home/lokasi"); ?>" class="orange" style="font-size: 40px">
-                  <i class="fas fa-map-marker-alt"></i>
-                </a>
-              </div>
-              <div class="menu-name">Lokasi</div>
-            </div>
+            
           </div>
         </div>
       </div>
@@ -103,7 +104,7 @@
                   </div>
                   <div class="presencedetail">
                     <h4 class="presencetitle">Masuk</h4>
-                    <span>07:00</span>
+                    <span>08:00</span>
                   </div>
                 </div>
               </div>
@@ -118,7 +119,7 @@
                   </div>
                   <div class="presencedetail">
                     <h4 class="presencetitle">Pulang</h4>
-                    <span>12:00</span>
+                    <span>17:00</span>
                   </div>
                 </div>
               </div>
@@ -127,12 +128,7 @@
         </div>
       </div>
 
-      <div class="rekappresence mt-1">
-        <div class="col">
-          <canvas id="myChart" style="min-height: 460px; height: 460px; max-height: 460px; max-width: 100%;"></canvas>
-        </div>
-      </div>
-
+      
       <div class="rekappresence mt-1">
 
         <div class="row">
@@ -333,7 +329,7 @@
         <strong>Docs</strong>
       </div>
     </a>
-    <a href="<?php base_url('home/profile'); ?>" class="item">
+    <a href="<?= base_url('home/profile'); ?>" class="item">
       <div class="col">
         <i class="fas fa-user-tie fa-3x"></i>
         <strong>Profile</strong>
@@ -362,19 +358,7 @@
   <script src="assets/js/base.js"></script>
 
   <script>
-    const ctx = document.getElementById('myChart');
-
-    new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
-      }
-    });
+    
   </script>
 </body>
 

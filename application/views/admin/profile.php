@@ -24,43 +24,91 @@
 </head>
 
 <body style="background-color: #e9ecef">
+
+
+<div class="appCapsule">
+  
+  
+  <div class="section bg-primary" id="user-section">
+
+  <div id="user-detail" class="d-flex justify-content-center">
+        <div class="avatar">
+          <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
+        </div>
+        <div id="user-info">
+          <h2 id="user-name">Dendi</h2>
+          <span id="user-role">Postrix</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- detail pegawai -->
+    <div class="section mt-2 mb-5">
+      <div class="section-title d-flex justify-content-center">
+        Profile
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="input-wrapper">
+            <label class="label" for="kodePegawai">Kode Pegawai</label>
+            <input type="text" class="form-control" name="kodePegawai" required disabled="true">
+          </div>
+          <div class="input-wrapper">
+            <label class="label" for="namaPegawai">Nama Pegawai</label>
+            <input type="text" class="form-control" name="namaPegawai" required disabled="true">
+          </div>
+          <div class="input-wrapper">
+            <label class="label" for="lokasiPegawai">Lokasi Kerja</label>
+            <input type="text" class="form-control" name="lokasiPegawai" required disabled="true">
+          </div>
+        </div>
+      </div>
+      <!-- detail pegawai -->
+
+      <!-- ganti Password -->
+
+      <form action="">
+      <div class="section-title d-flex justify-content-center">Password</div>
+      <div class="card">
+        <div class="card-body">
+          <div class="input-wrapper">
+            <label class="label" for="emailPegawai">Email</label>
+            <input type="text" class="form-control" name="emailPegawai" required disabled="true">
+          </div>
+          
+          <div class="input-wrapper">
+            <label class="label" for="passwordBaru">Password Baru</label>
+            <input type="text" class="form-control" name="passwordBaru" required disabled="true">
+          </div>
+          <hr>
+          <div class="container d-flex justify-content-center">
+          <button type="submit" class="btn btn-success mr-1 btn-lg btn-block">Submit</button>
+          </div>
+        </div>
+      </div>
+      
+      </form>
+    </div>
+
+    <!-- ganti password -->
+ 
+    
+
+    
+    
+
+
+    
+
+  
+
+  </div>
+    
     
 
 
 <!-- App Bottom Menu -->
-<div class="appBottomMenu">
-    <a href="<?php echo site_url("welcome/index"); ?>" class="item">
-      <div class="col">
-        <i class="fas fa-home fa-3x"></i>
-        <strong>Home</strong>
-      </div>
-    </a>
-    <a href="#" class="item active">
-      <div class="col">
-        <i class="fas fa-calendar-alt fa-3x"></i>
-        <strong>Calendar</strong>
-      </div>
-    </a>
-    <a href="#" class="item">
-      <div class="col">
-        <div class="action-button large">
-          <i class="fas fa-camera text-white fa-3x"></i>
-        </div>
-      </div>
-    </a>
-    <a href="#" class="item">
-      <div class="col">
-        <i class="fas fa-file-alt fa-3x"></i>
-        <strong>Docs</strong>
-      </div>
-    </a>
-    <a href="<?php echo site_url("welcome/profile"); ?>" class="item">
-      <div class="col">
-        <i class="fas fa-user-tie fa-3x"></i>
-        <strong>Profile</strong>
-      </div>
-    </a>
-  </div>
+
   <!-- * App Bottom Menu -->
 </body>
 </html>

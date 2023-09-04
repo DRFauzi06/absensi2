@@ -7928,6 +7928,14 @@ body.dark-mode-active .cart-item .cart-item-footer {
   border-radius: 10px 10px 0px 0px;
 }
 
+#presence-section2 {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 10px 10px 0px 0px;
+}
+
 .todaypresence {
   margin-top: 90px;
   margin-bottom: 20px;
