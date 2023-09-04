@@ -71,7 +71,7 @@
             </div>
             <div class="item-menu text-center">
               <div class="menu-icon">
-                <a href="<?php echo site_url("welcome/history"); ?>" class="warning" style="font-size: 40px">
+                <a href="<?php echo site_url("home/history"); ?>" class="warning" style="font-size: 40px">
                   <i class="fas fa-file-alt"></i>
                 </a>
               </div>
@@ -81,7 +81,7 @@
             </div>
             <div class="item-menu text-center">
               <div class="menu-icon">
-                <a href="<?php echo site_url("welcome/lokasi"); ?>" class="orange" style="font-size: 40px">
+                <a href="<?php echo site_url("home/lokasi"); ?>" class="orange" style="font-size: 40px">
                   <i class="fas fa-map-marker-alt"></i>
                 </a>
               </div>

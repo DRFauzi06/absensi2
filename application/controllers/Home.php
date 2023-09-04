@@ -14,25 +14,25 @@ class Home extends CI_Controller {
 	{
 
 		$this->load->helper('url');
-		$this->load->view('home/profile');
+		$this->load->view('admin/profile');
 	}
 	public function cuti()
 	{
 
 		$this->load->helper('url');
-		$this->load->view('cuti');
+		$this->load->view('admin/cuti');
 	}
 	public function history()
 	{
 
 		$this->load->helper('url');
-		$this->load->view('history');
+		$this->load->view('admin/history');
 	}
 	public function lokasi()
 	{
 
 		$this->load->helper('url');
-		$this->load->view('lokasi');
+		$this->load->view('admin/lokasi');
 	}
 	
 }
