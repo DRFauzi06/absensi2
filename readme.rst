@@ -1,4 +1,4 @@
 ###################
-Absensi Karyawan QR Codes
+Front End Absensi Karyawan 
 ###################
-Absensi Karyawan QR Code dibuat dengan Framework CI- 3 
+Desain tampilan Absensi Karyawan menggunakan framework CI 3
