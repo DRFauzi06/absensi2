@@ -32,9 +32,19 @@
   <div class="section bg-primary" id="user-section">
 
   <div id="user-detail" class="d-flex justify-content-center">
-        <div class="avatar">
-          <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
-        </div>
+        <!-- <div class="avatar"> -->
+          <div class="avatar-section">
+            
+        
+        <a href="">
+        <input type="file" class="upload" name="file" id="avatar" accept=".jpg, .jpeg, ,gif, .png" capture="camera">
+          <img src="<?= base_url()?>assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w100 rounded" />
+          <span class="button bg-white text-dark">
+          <i class="fa-solid fa-camera"></i>
+                    </span>
+                    </a>
+          </div>  
+        <!-- </div> -->
         <div id="user-info">
           <h2 id="user-name">Dendi</h2>
           <span id="user-role">Postrix</span>
