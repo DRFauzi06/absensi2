@@ -9,7 +9,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#000000" />
-  <title>History</title>
+  <title>Absen</title>
   <meta name="description" content="Mobilekit HTML Mobile UI Kit" />
   <meta name="keywords" content="bootstrap 4, mobile template, cordova, phonegap, mobile, html" />
   <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/favicon.png" sizes="32x32" />
@@ -28,23 +28,35 @@
 <div class="appCapsule">
   <div class="section bg-primary" id="user-section">
 
-  <div id="user-detail">
-        <div class="avatar">
-          <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
-        </div>
-        <div id="user-info">
-          <h2 id="user-name">Dendi</h2>
-          <span id="user-role">Postrix</span>
-        </div>
-      </div>
+  
     </div>
 
-    <div class="section mt-2" id="presence-section">
+
+    
+    <div class="section" id="menu-section">
+      <div class="card">
+        <div class="card-body">
+            <div class="container" style="float:left;width: 50%">
+            <h4>Selamat Siang</h4>
+            <h4>Dendi Rizal Fauzi</h4>
+            </div>
+            <div class="container text-right" style="float:right;width: 50%">
+            <h4>04 September 2023</h4>
+            <h4>Jam</h4>
+            </div>
+            
+          
+            
+          </div>
+          <hr>
+        </div>
+        <div class="card">
+            
+        </div>
       
     </div>
   </div>
     <!-- app capsule -->
-    
 
 
 <!-- App Bottom Menu -->

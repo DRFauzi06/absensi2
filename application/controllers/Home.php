@@ -15,28 +15,35 @@ class Home extends CI_Controller {
 	{
 
 		$this->load->helper('url');
-		$this->load->view('admin/profile');
+		$this->load->view('user/profile');
 		$this->load->view('layout/bottom');
 	}
 	public function cuti()
 	{
 
 		$this->load->helper('url');
-		$this->load->view('admin/cuti');
+		$this->load->view('user/cuti');
 		$this->load->view('layout/bottom');
 	}
 	public function history()
 	{
 
 		$this->load->helper('url');
-		$this->load->view('admin/history');
+		$this->load->view('user/history');
 		$this->load->view('layout/bottom');
 	}
 	public function izin()
 	{
 
 		$this->load->helper('url');
-		$this->load->view('admin/izin');
+		$this->load->view('user/izin');
+		$this->load->view('layout/bottom');
+	}
+	public function absen()
+	{
+
+		$this->load->helper('url');
+		$this->load->view('user/absen');
 		$this->load->view('layout/bottom');
 	}
 	
