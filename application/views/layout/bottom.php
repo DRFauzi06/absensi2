@@ -1,5 +1,5 @@
 <div class="appBottomMenu">
-    <a href="<?php echo site_url(); ?>" class="item">
+    <a href="<?php echo site_url("home/index"); ?>" class="item">
       <div class="col">
         <i class="fas fa-home fa-3x"></i>
         <strong>Home</strong>

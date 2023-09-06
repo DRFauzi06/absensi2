@@ -9,10 +9,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#000000" />
-  <title>Cuti</title>
+  <title>Izin</title>
   <meta name="description" content="Mobilekit HTML Mobile UI Kit" />
   <meta name="keywords" content="bootstrap 4, mobile template, cordova, phonegap, mobile, html" />
-  <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/logo_postra.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/favicon.png" sizes="32x32" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/inc/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/inc/owl-carousel/owl.carousel.min.css" />
@@ -28,9 +28,9 @@
 <div class="appCapsule">
   <div class="section bg-primary" id="user-section">
 
-  <div id="user-detail" class="d-flex justify-content-center">
+  <div id="user-detail">
         <div class="avatar">
-          <img src="<?= base_url()?>assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
+          <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
         </div>
         <div id="user-info">
           <h2 id="user-name">Dendi</h2>
@@ -44,7 +44,6 @@
     </div>
   </div>
     <!-- app capsule -->
-    
 
 
 <!-- App Bottom Menu -->

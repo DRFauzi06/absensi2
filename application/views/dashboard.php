@@ -14,7 +14,7 @@
   <title>Dashboard</title>
   <meta name="description" content="Mobilekit HTML Mobile UI Kit" />
   <meta name="keywords" content="bootstrap 4, mobile template, cordova, phonegap, mobile, html" />
-  <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/favicon.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/logo_postra.png" sizes="32x32" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/inc/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/inc/owl-carousel/owl.carousel.min.css" />
@@ -27,9 +27,9 @@
 
 <body style="background-color: #e9ecef">
   <!-- loader -->
-  <div id="loader">
+  <!-- <div id="loader">
     <div class="spinner-border text-primary" role="status"></div>
-  </div>
+  </div> -->
   <!-- * loader -->
 
   <!-- App Capsule -->
@@ -37,7 +37,7 @@
     <div class="section bg-primary" id="user-section">
       <div id="user-detail">
         <div class="avatar">
-          <img src="assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
+          <img src="<?= base_url()?>assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />
         </div>
         <div id="user-info">
           <h2 id="user-name">Dendi</h2>
@@ -302,41 +302,7 @@
   </div>
   <!-- * App Capsule -->
 
-  <!-- App Bottom Menu -->
-  <div class="appBottomMenu">
-    <a href="#" class="item">
-      <div class="col">
-        <i class="fas fa-home fa-3x"></i>
-        <strong>Home</strong>
-      </div>
-    </a>
-    <a href="#" class="item active">
-      <div class="col">
-        <i class="fas fa-calendar-alt fa-3x"></i>
-        <strong>Calendar</strong>
-      </div>
-    </a>
-    <a href="#" class="item">
-      <div class="col">
-        <div class="action-button large">
-          <i class="fas fa-camera text-white fa-3x"></i>
-        </div>
-      </div>
-    </a>
-    <a href="<?php base_url('home/cuti'); ?>" class="item">
-      <div class="col">
-        <i class="fas fa-file-alt fa-3x"></i>
-        <strong>Docs</strong>
-      </div>
-    </a>
-    <a href="<?= base_url('home/profile'); ?>" class="item">
-      <div class="col">
-        <i class="fas fa-user-tie fa-3x"></i>
-        <strong>Profile</strong>
-      </div>
-    </a>
-  </div>
-  <!-- * App Bottom Menu -->
+  
 
   <!-- ///////////// Js Files ////////////////////  -->
   <!-- Jquery -->

@@ -6,10 +6,16 @@ class Home extends CI_Controller {
 	
 	public function index()
 	{
-
 		$this->load->helper('url');
 		$this->load->view('dashboard');
 		$this->load->view('layout/bottom');
+
+		
+		
+	}
+
+	public function dashboard(){
+		
 	}
 	public function profile()
 	{
