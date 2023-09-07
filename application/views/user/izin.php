@@ -12,7 +12,7 @@
   <title>Izin</title>
   <meta name="description" content="Mobilekit HTML Mobile UI Kit" />
   <meta name="keywords" content="bootstrap 4, mobile template, cordova, phonegap, mobile, html" />
-  <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/logo_postra.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/favicon.png" sizes="32x32" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/img/icon/192x192.png" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/inc/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/inc/owl-carousel/owl.carousel.min.css" />
@@ -25,6 +25,7 @@
 
 <body style="background-color: #e9ecef">
 <!-- app capsule -->
+
 <div class="appCapsule">
   <div class="section bg-primary" id="user-section">
 
@@ -86,9 +87,10 @@
                 </div>
             </div>
         </div> 
-                <!-- MODAL ADD -->
-                <div class="modal fade modalbox" id="modal-add" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
+        
+    <!-- MODAL ADD -->
+    <div class="modal fade" id="modal-add" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">Tambah Pengajuan Izin</h5>
@@ -168,6 +170,66 @@
         </div>
     </div>
 
+    <!-- MODAL EDIT -->
+        <div class="modal fade modalbox" id="modal-edit" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Edit Permohonan Izin</h5>
+                        <a href="javascript:;" data-dismiss="modal">Close</a>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-edit-izin" autocomplete="off">
+                            <input type="hidden" name="id" id="id" value="" required>
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label">Nama</label>
+                                    <input type="text" class="form-control" id="name" name="permission_name" value="" required>
+                                    <i class="clear-input"><ion-icon name="close-circle"></ion-icon></i>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label">Tanggal</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control datepicker"  id="date" name="permission_date" required>
+                                            <div class="input-group-addon">
+                                                <ion-icon name="calendar-outline"></ion-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+
+                            <br>
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label">Upload</label>
+                                    <input type="file" class="form-control" name="files" accept=".jpg, .jpeg, .pdf, .docx, .docm">
+                                </div>
+                                <span class="small text-danger">Pasikan Surat yang di Upload dengan Format harus JPG, JPEG dan PDF</span>
+                            </div>
+
+                            <div class="form-group basic">
+                                <div class="input-wrapper">
+                                    <label class="label">Keterangan</label>
+                                   <textarea rows="3" class="form-control permission_description" id="description" name="permission_description" required></textarea>
+                                    <i class="clear-input"><ion-icon name="close-circle"></ion-icon></i>
+                                </div>
+                            </div>
+
+                            <div class="form-group basic">
+                                <button type="submit" class="btn btn-danger btn-block btn-lg mt-2">Simpan</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
     <!-- app capsule -->
 
@@ -175,5 +237,8 @@
 <!-- App Bottom Menu -->
 
   <!-- * App Bottom Menu -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
