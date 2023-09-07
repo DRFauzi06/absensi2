@@ -35,6 +35,7 @@
   <!-- App Capsule -->
   <div id="appCapsule">
     <div class="section bg-primary" id="user-section">
+    <?= $this->session->flashdata('message') ?>
       <div id="user-detail">
         <div class="avatar">
           <img src="<?= base_url()?>assets/img/sample/avatar/avatar1.jpg" alt="avatar" class="imaged w64 rounded" />

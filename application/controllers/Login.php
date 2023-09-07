@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * @property form_validation $form_validation
+ * @property load $load
+ * @property mixed $db
+ * @property mixed $input
+ * @property mixed $session
+ * 
+ */
 class Login extends CI_Controller{
 
     public function __construct()
@@ -59,6 +67,16 @@ class Login extends CI_Controller{
     public function register(){
         $this->load->helper('url');
 		$this->load->view('register');
+    }
+
+
+    public function keluar()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_id');
+
+        $this->session->set_flashdata('message', '<div class="alert alert-success ml-4 mr-4">Anda telah keluar!</div>');
+        redirect('login/index');
     }
 }
 

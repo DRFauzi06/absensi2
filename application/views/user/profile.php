@@ -57,19 +57,20 @@
       <div class="section-title d-flex justify-content-center">
         Profile
       </div>
+      
       <div class="card">
         <div class="card-body">
           <div class="input-wrapper">
             <label class="label" for="kodePegawai">Kode Pegawai</label>
-            <input type="text" class="form-control" name="kodePegawai" required disabled="true">
+            <input type="text" class="form-control bg-light" name="kodePegawai" required disabled="true" value="<?= $detailProfile['karyawan_nip'] ?>">
           </div>
           <div class="input-wrapper">
             <label class="label" for="namaPegawai">Nama Pegawai</label>
-            <input type="text" class="form-control" name="namaPegawai" required disabled="true">
+            <input type="text" class="form-control bg-light" name="namaPegawai" required disabled="true" value="<?= $detailProfile['nama_karyawan'] ?>">
           </div>
           <div class="input-wrapper">
             <label class="label" for="lokasiPegawai">Lokasi Kerja</label>
-            <input type="text" class="form-control" name="lokasiPegawai" required disabled="true">
+            <input type="text" class="form-control bg-light" name="lokasiPegawai" required disabled="true" value="<?= $kantor['nama_kantor'] ?>">
           </div>
         </div>
       </div>
@@ -77,18 +78,20 @@
 
       <!-- ganti Password -->
 
-      <form action="">
+      <form method="post" action="<?= base_url('home/updatePassword'); ?>">
       <div class="section-title d-flex justify-content-center">Password</div>
       <div class="card">
         <div class="card-body">
           <div class="input-wrapper">
             <label class="label" for="emailPegawai">Email</label>
-            <input type="text" class="form-control" name="emailPegawai" required disabled="true">
+            <input type="text" class="form-control bg-light" id="emailPegawai" name="emailPegawai" required disabled="true" value="<?= $detailProfile['karyawan_email'] ?>">
           </div>
+
+          <input type="text" name="idKaryawan" value="<?= $detailProfile['id_karyawan'] ?>">
           
           <div class="input-wrapper">
             <label class="label" for="passwordBaru">Password Baru</label>
-            <input type="text" class="form-control" name="passwordBaru" required disabled="true">
+            <input type="text" class="form-control" id="passwordBaru" name="passwordBaru" required>
           </div>
           <hr>
           <div class="container d-flex justify-content-center">
