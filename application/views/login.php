@@ -18,6 +18,8 @@
 </head>
 <body style="background-color: #e9ecef">
 
+
+
 <section class="vh-100 bg-image">
     <div class="mask d-flex align-items-center h-100 gradient-custom-3">
 
@@ -28,25 +30,26 @@
             <div class="card" style="border-radius: 15px;">
                 <div class="card-body p-5">
                 <h2 class="text-uppercase text-center mb-5">Login</h2>
-                <form action="<?php echo site_url('home/index'); ?>">
+                <?= $this->session->flashdata('message') ?>
+                <form action="<?= base_url('login/index'); ?>" method="POST">
                 <!-- <form> -->
   <!-- Email input -->
   <div class="form-outline mb-4">
-  <label class="form-label" for="emailUser">Email</label>
-    <input type="email" id="emailUser" class="form-control" placeholder="Email anda" />
+  <label class="form-label" for="email">Email</label>
+    <input type="email" id="email" name="email" class="form-control" placeholder="Email anda" />
     
   </div>
 
   <!-- Password input -->
   <div class="form-outline mb-4">
-  <label class="form-label" for="emailUser">Password</label>
-    <input type="password" id="emailUser" class="form-control" placeholder="Password anda" />
+  <label class="form-label" for="password">Password</label>
+    <input type="password" id="password" name="password" class="form-control" placeholder="Password anda" />
     
   </div>
 
 
   <!-- Submit button -->
-  <a href="<?php echo site_url('home/dashboard'); ?>"></a>
+  
   <button type="submit" class="btn btn-primary btn-block mb-4">Masuk</button>
   <div class="row mb-4">
     <div class="col">
