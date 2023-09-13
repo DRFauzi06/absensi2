@@ -25,60 +25,61 @@
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Daftar</h2>
+              <?= $this->session->flashdata('message') ?>
 
-              <form action="<?php echo site_url('home/index'); ?>">
+              <form method="post" action="<?php echo base_url('login/registrasi'); ?>">
 
                 <div class="form-outline-sm mb-4">
-                <label class="form-label" for="form3Example1cg">ID</label>
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                <label class="form-label" for="idUser">ID</label>
+                  <input type="text" id="idUser" name="idUser" class="form-control form-control-lg" value="<?= $unik ?>" required/>
                   
                 </div>
 
                 <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example3cg">Nama</label>
-                  <input type="text" id="form3Example3cg" class="form-control form-control-lg" />
+                <label class="form-label" for="namaUser">Nama</label>
+                  <input type="text" id="namaUser" name="namaUser" class="form-control form-control-lg" required/>
                   
                 </div>
 
                 <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example4cg">Email</label>
-                  <input type="email" id="form3Example4cg" class="form-control form-control-lg" />
+                <label class="form-label" for="emailUser">Email</label>
+                  <input type="email" id="emailUser" name="emailUser" class="form-control form-control-lg" required/>
                   
                 </div>
 
                 <div class="form-outline mb-4">
-                <label class="form-label" for="">Jabatan</label>
-                <select class="form-select " aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+                <label class="form-label" for="jabatanUser">Jabatan</label>
+                <select class="form-select " id="jabatanUser" name="jabatanUser" aria-label="Default select example" required>
+  <option selected>-Pilih-</option>
+  <option value="0">-</option>
 </select>
                 </div>
 
                 <div class="form-outline mb-4">
-                <label class="form-label" for="">Jam kerja</label>
-                <select class="form-select " aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+                <label class="form-label" for="jamKerja">Jam kerja</label>
+                <select class="form-select " id="jamKerja" name="jamKerja" aria-label="Default select example" required>
+  <option selected>-Pilih-</option>
+  <option value="0">-</option>
 </select>
                 </div>
 
                 <div class="form-outline mb-4">
-                <label class="form-label" for="">Lokasi</label>
-                <select class="form-select " aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+                <label class="form-label" for="lokasiUser">Lokasi</label>
+                <select class="form-select " id="lokasiUser" name="lokasiUser" aria-label="Default select example" required>
+  <option selected>-Pilih-</option>
+  <option value="0  ">-</option>
 </select>
                 </div>
 
                 <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example4c">Password</label>
-                  <input type="password" id="form3Example4c" class="form-control form-control-lg" />
+                <label class="form-label" for="password">Password</label>
+                  <input type="password" id="password" name="password" class="form-control form-control-lg" required />
+                  
+                </div>
+
+                <div class="form-outline mb-4">
+                <label class="form-label" for="password2">Konfirmasi Password</label>
+                  <input type="password" id="password2" name="password2" class="form-control form-control-lg" required />
                   
                 </div>
 
@@ -90,7 +91,7 @@
   <div class="row mb-4">
     
 
-                <p class="text-center text-muted mt-5 mb-0">Sudah punya akun? <a href="#!"
+                <p class="text-center text-muted mt-5 mb-0">Sudah punya akun? <a href="<?= base_url('login/index');?>"
                     class="fw-bold text-body"><u>Login disini</u></a></p>
 
               </form>
