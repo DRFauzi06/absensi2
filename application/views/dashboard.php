@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- <?php var_dump($jam);
+  var_dump($detailProfile) ?> -->
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -105,7 +107,7 @@
                   </div>
                   <div class="presencedetail">
                     <h4 class="presencetitle">Masuk</h4>
-                    <span>08:00</span>
+                    <span><?= $jam['waktu_masuk'] ?></span>
                   </div>
                 </div>
               </div>
@@ -120,7 +122,7 @@
                   </div>
                   <div class="presencedetail">
                     <h4 class="presencetitle">Pulang</h4>
-                    <span>17:00</span>
+                    <span><?= $jam['waktu_pulang'] ?></span>
                   </div>
                 </div>
               </div>

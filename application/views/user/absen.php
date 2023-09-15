@@ -35,6 +35,15 @@
   <link rel="stylesheet" href="<?php echo base_url()?>assets/fontawesome-free/css/all.min.css" />
   <link rel="stylesheet" href="<?php echo base_url()?>assets/css/style.css" />
   <script type="text/javascript" src="<?php echo base_url()?>assets/webcamjs/webcam.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Leaflet
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+	<!-- Accurate Position Plugin -->
+	<!-- <link rel="stylesheet" href="style.css">
+	<script src="../Leaflet.AccuratePosition.js"></script> --> 
+
 </head>
 
 <body style="background-color: #e9ecef">
@@ -49,15 +58,24 @@
     
     <div class="section" id="menu-section">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body mb-0">
             <div class="container" style="float:left;width: 50%">
             <h4>Selamat Siang</h4>
             <h4>Dendi Rizal Fauzi</h4>
             </div>
+            <form id="absen">
             <div class="container text-right" style="float:right;width: 50%">
-            <h4><?= date('d F Y')?></h4>
-            <h4><?= date('h:i A')?></h4>
+            <h4  ><?= date('D F Y')?></h4>
+            <h4  ><?= date('H:i ')?></h4>
             </div>
+            
+            <input type="hidden" name="tanggalAbsen" id="tanggalAbsen" value="<?= date('Y-m-d')?>">
+            <input type="hidden" name="jamAbsen" id="jamAbsen" value="<?= date('H:i:s A')?>">
+            <input type="hidden" name="latlong" id="latlong" value="">
+            <div class="row  d-flex justify-content-center">
+              <p>Lat-Long:</p>
+              <p id="coord"></p>
+              </div>
             
           
             
@@ -70,7 +88,7 @@
             
         </div>
         <div class="text-center">
-        <button class="btn btn-success  btn-lg btn-block" onClick="take_snapshot()">Absen Masuk</button>
+        <button type="submit" class="btn btn-success  btn-lg btn-block" onClick="take_snapshot()">Absen</button>
     
     </div>
     </div>
@@ -79,6 +97,7 @@
         <div class="card">
         <div id="results" ></div>
         </div>
+        </form>
 
 
 
@@ -124,4 +143,67 @@ function saveSnap(){
    });
 
 }
+ </script>
+
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+   if(!navigator.geolocation){
+    console.log("Your browser doesn't support geolocation feature!")
+  }else{
+    navigator.geolocation.getCurrentPosition(getPosition)
+  }
+
+function getPosition(position){
+      console.log(position);
+      var lat =position.coords.latitude
+      var long =position.coords.longitude
+      console.log(lat)
+      $(lat).text(lat)
+      $(long).text(long)
+      var latlong = lat+","+long;
+
+      document.getElementById("coord").innerHTML = lat+","+long
+      document.getElementById("latlong").value = latlong;
+      // document.getElementById("long").innerHTML = "Longitude : "+long
+      
+    }
+
+  $('#absen').on('submit', function (event) {
+			event.preventDefault();
+      
+      
+			var image = '';
+			var tanggal = $('#tanggalAbsen').val();
+			var jam = $('#jamAbsen').val();
+      var latlong = $('#latlong').val();
+			// var password = $('#password').val();
+			Webcam.snap( function(data_uri) {
+				image = data_uri;
+			});
+			$.ajax({
+				url: '<?php echo site_url("home/uploadAbsen");?>',
+			  method: 'POST',
+				dataType: 'json',
+				data: {image: image, tanggal: tanggal, jam: jam, latlong: latlong},
+			})
+			.done(function(data) {
+				if (data > 0) {
+					alert('insert data sukses');
+					$('#absen')[0].reset();
+          // window.location.href = "<?php echo site_url('home/index'); ?>";
+				}
+			})
+			.fail(function() {
+				console.log("error");
+			})
+			.always(function() {
+				console.log("complete");
+			});
+			
+			
+		});
+
+    
+    
  </script>
