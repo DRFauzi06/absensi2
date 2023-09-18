@@ -122,7 +122,7 @@
                                 <div class="input-wrapper">
                                     <label class="label">Selesai</label>
                                         <div class="input-group">
-                                            <input type="date" class="form-control datepicker" name="permission_date_finish" placeholder="" value="" required>
+                                            <input type="date" class="form-control datepicker" name="permission_date_finish" placeholder="tanggal" value="" required>
                                             <div class="input-group-addon">
                                                 <ion-icon name="calendar-outline"></ion-icon>
                                             </div>
