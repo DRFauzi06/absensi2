@@ -97,11 +97,11 @@
                         <a href="javascript:;" data-dismiss="modal">Close</a>
                     </div>
                     <div class="modal-body">
-                        <form class="form-add-izin" autocomplete="off">
+                        <form method="POST" class="form-add-izin" action="<?= base_url('home/addIzin') ?>" autocomplete="off">
                             <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <label class="label">Nama</label>
-                                    <input type="text" class="form-control" name="permission_name" value="'.$row_user['employees_name'].'" readonly required>
+                                    <input type="text" class="form-control" name="permission_name" value="<?php $detailProfile['nama_karyawan'] ?>" readonly required>
                                     <i class="clear-input"><ion-icon name="close-circle"></ion-icon></i>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                                 <div class="input-wrapper">
                                     <label class="label">Mulai</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control datepicker" name="permission_date" placeholder="'.tanggal_ind($date).'" value="'.tanggal_ind($date).'" required>
+                                            <input type="date" class="form-control datepicker" name="permission_date" placeholder="'.tanggal_ind($date).'" value="" required>
                                             <div class="input-group-addon">
                                                 <ion-icon name="calendar-outline"></ion-icon>
                                             </div>
@@ -122,7 +122,7 @@
                                 <div class="input-wrapper">
                                     <label class="label">Selesai</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control datepicker" name="permission_date_finish" placeholder="'.tanggal_ind($date).'" value="" required>
+                                            <input type="date" class="form-control datepicker" name="permission_date_finish" placeholder="'.tanggal_ind($date).'" value="" required>
                                             <div class="input-group-addon">
                                                 <ion-icon name="calendar-outline"></ion-icon>
                                             </div>
@@ -135,10 +135,10 @@
                                     <label class="label">Status</label>
                                     <select class="form-control custom-select" name="type" required>
                                         <option value="">Pilih status:</option>
-                                        <option value="3/Izin">Izin</option>
-                                        <option value="2/Sakit">Sakit</option>
-                                        <option value="4/Dinas Luar Kota">Dinas Luar Kota</option>
-                                        <option value="5/Dinas Dalam Kota">Dinas Dalam Kota</option>
+                                        <option value="Izin">Izin</option>
+                                        <option value="Sakit">Sakit</option>
+                                        <option value="Dinas Luar Kota">Dinas Luar Kota</option>
+                                        <option value="Dinas Dalam Kota">Dinas Dalam Kota</option>
                                     </select>
                                 </div>
                             </div>
@@ -146,7 +146,7 @@
                             <div class="form-group basic-boxed">
                                 <div class="input-wrapper mb-1">
                                     <label class="label">Upload</label>
-                                    <input type="file" class="form-control" name="files" accept=".jpg, .jpeg, .pdf, .docx, .docm" required>
+                                    <input type="file" class="form-control" enctype="multipart/form-data" name="files" accept=".jpg, .jpeg, .pdf, .docx, .docm" required>
                                 </div>
                                     <span class="small text-danger">Silahkan upload file, Pasikan Surat yang di Upload dengan Format harus JPG/JPEG, DOC atau PDF</span>
                             </div>

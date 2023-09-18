@@ -104,11 +104,11 @@
                         <a href="javascript:;" data-dismiss="modal">Close</a>
                     </div>
                     <div class="modal-body">
-                        <form id="form-add-cuty" autocomplete="off">
+                        <form method="POST" id="form-add-cuty" action="<?= base_url('home/addCuti') ?>" autocomplete="off">
                             <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <label class="label">Nama</label>
-                                    <input type="text" class="form-control" name="name" value="'.$row_user['employees_name'].'" style="background:#eee" readonly required>
+                                    <input type="text" class="form-control" name="name" value="<?php $detailProfile['nama_karyawan'] ?>" style="background:#eee" readonly required>
                                     <i class="clear-input"><ion-icon name="close-circle"></ion-icon></i>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@
                                 <div class="input-wrapper">
                                     <label class="label">Mulai Cuti</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control datepicker" id="cutystart" name="cuty_start" placeholder="'.tanggal_ind($date).'" value="'.tanggal_ind($date).'" required>
+                                            <input type="date" class="form-control datepicker" id="mulai_cuti" name="mulai_cuti" placeholder="'.tanggal_ind($date).'" value="" required>
                                             <div class="input-group-addon">
                                                 <ion-icon name="calendar-outline"></ion-icon>
                                             </div>
@@ -129,7 +129,7 @@
                                 <div class="input-wrapper">
                                     <label class="label">Berakhir Cuti</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control datepicker" id="cutyend" name="cuty_end" placeholder="'.tanggal_ind($date).'" value="" required>
+                                            <input type="date" class="form-control datepicker" id="cuti_berakhir" name="cuti_berakhir" placeholder="'.tanggal_ind($date).'" value="" required>
                                             <div class="input-group-addon">
                                                 <ion-icon name="calendar-outline"></ion-icon>
                                             </div>
@@ -141,7 +141,7 @@
                                 <div class="input-wrapper">
                                     <label class="label">Tanggal Masuk Kerja</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control datepicker" name="date_work" placeholder="'.tanggal_ind($date).'" value="" required>
+                                            <input type="date" class="form-control datepicker" name="tanggal_masuk" placeholder="'.tanggal_ind($date).'" value="" required>
                                             <div class="input-group-addon">
                                                 <ion-icon name="calendar-outline"></ion-icon>
                                             </div>
@@ -152,7 +152,7 @@
                              <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <label class="label">Jumlah Cuti</label>
-                                    <input type="number" class="form-control" name="cuty_total" value="" required>
+                                    <input type="number" class="form-control" name="jumlah_cuti" value="" required>
                                     <i class="clear-input"><ion-icon name="close-circle"></ion-icon></i>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@
                             <div class="form-group basic">
                                 <div class="input-wrapper">
                                     <label class="label">Keterangan</label>
-                                   <textarea rows="2" class="form-control cuty_description" name="cuty_description" required></textarea>
+                                   <textarea rows="2" class="form-control cuty_description" name="keterangan_cuti" required></textarea>
                                     <i class="clear-input"><ion-icon name="close-circle"></ion-icon></i>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@
                         <a href="javascript:;" data-dismiss="modal">Close</a>
                     </div>
                     <div class="modal-body">
-                        <form id="form-update-cuty" autocomplete="off">
+                        <form method="POST" id="form-update-cuty" action="<?= base_url('home/updateCuti') ?>" autocomplete="off">
                             <input type="hidden" id="city-id" name="cuty_id" value="" readonly required>
                             <div class="form-group basic">
                                 <div class="input-wrapper">
