@@ -222,7 +222,7 @@ class Home extends CI_Controller {
 				'keterangan' => '1'
 			);
 			$this->db->insert('absensi', $data);
-			
+			//
 			redirect('home/index');
 
 		}else if($status->keterangan == 1){
